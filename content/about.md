@@ -10,7 +10,7 @@ erfarenheter vad beträffar programmering för en matematiklärares behov; allts
 inte erfarenheter kring *elevernas* programmering matematikkurser (det kanhända
 att jag [skriver om på xiblog](https://xiblog.se)). Idén till webbplatsen kom
 upp i samband med att jag orienterade mig i Python-biblioteket
-[matplotlib](https://matplotlib.org).
+[Matplotlib](https://matplotlib.org).
 
 En annan sida av saken är att jag är intresserad av att pröva olika tekniska
 lösningar. Den här webbplatsen ligger på [GitHub](https://github.com) och är
@@ -22,9 +22,9 @@ WYSIWYG)-gränssnitt, som ju är väldigt vanligt. Det kommer att visa sig om ja
 kommer att uppleva det som praktiskt och flexibelt eller mest som bökigt.
 
 Det var iallafall en liten introduktion till webbplatsen. Oj, jag som driver
-xicode.se heter Nikodemus Karlsson och är gymnasielärare i matematik och fysik.
+xicode heter Nikodemus Karlsson och är gymnasielärare i matematik och fysik.
 Jag driver också [xiblog](https://xiblog.se), som är tänkt för mer skolämnes-
-och undervisningsrelaterade frågor, min privata sajt [nikodemus.se](https://nikodemus.se), än så länge inte så många inlägg och sajten [cloudheaven.se]
+och undervisningsrelaterade frågor, min privata sajt [nikodemus.se](https://nikodemus.se), än så länge inte så många inlägg och sajten [Cloudheaven]
 (https://cloudheaven.se), som jag mest använder som en testmiljö för Linux-
 relaterade saker.
 
