@@ -9,4 +9,4 @@ showFullContent = false
 draft = false
 +++
 En ny sajt, dedicerad till programmering med inriktning mot undervisning i matematik och fysik.
-Önska mig lycka till.
+Önska mig lycka till!
