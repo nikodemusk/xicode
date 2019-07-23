@@ -24,9 +24,14 @@ kommer att uppleva det som praktiskt och flexibelt eller mest som bökigt.
 Det var iallafall en liten introduktion till webbplatsen. Oj, jag som driver
 xicode heter Nikodemus Karlsson och är gymnasielärare i matematik och fysik.
 Jag driver också [xiblog](https://xiblog.se), som är tänkt för mer skolämnes-
-och undervisningsrelaterade frågor, min privata sajt [nikodemus.se](https://nikodemus.se), än så länge inte så många inlägg och sajten [Cloudheaven]
-(https://cloudheaven.se), som jag mest använder som en testmiljö för Linux-
-relaterade saker.
+och undervisningsrelaterade frågor, min privata sajt
+[nikodemus.se](https://nikodemus.se), än så länge inte så många inlägg och
+sajten [Cloudheaven] (https://cloudheaven.se), som jag mest använder som en
+labb-miljö för Linux-relaterade saker.
 
-På Twitter är jag [magistern](https://twitter.com/magistern).
+På Twitter är jag
+<a href="https://twitter.com/magistern?ref_src=twsrc%5Etfw"
+class="twitter-follow-button" data-show-count="false">Follow @magistern</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+</script>
 Följ mig gärna där!
