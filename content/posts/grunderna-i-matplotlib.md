@@ -71,4 +71,81 @@ till en figur, varpå diagrammet läggs i figuren, varpå grafen plottas i
 diagrammet. Nackdelen med exemplet är att det inte är så här som det brukar
 lösas; det är vanligt att vara mer generell på bekostnad av tydligheten.
 
-# Ett mer generellt exempel
+# Exempel på funktionsgraf
+Jag vill avrunda med ett exempel på hur en funktionsgraf kan fås fram. Som
+lärare i matematik är det en detalj i diagrammen som hittills inte är till
+belåtenhet: koordinataxlarna. De diagram som jag ritat upp innesluts av en
+ram som också utgör koordinataxlarna. Men många mattelärare med mig önskar
+koordinataxlar som skär varandra i origo.
+
+Dessutom ska jag inte ha en linjär funktion denna gång, det innebär också
+att det kommer att behövas **många** fler koordinater än tidigare.
+
+Låt oss plotta funktionen $y=3-e^{-x}$ i intervallet $-2\leq x\leq 5$
+
+{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/funktionsgraf.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 5: Funktionsgraf" captionPosition="center" captionStyle="color: red;" >}}
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+plt.rcParams["mathtext.fontset"] = "cm" # Ger ett bra typsnitt för formler
+plt.style.use("dark_background") # "default" är den förinställda stilen
+
+# Variabler som styr grafens storlek,
+# upplösning och längd- breddförhållande.
+width, dpi = (700, 110)
+w = width / dpi
+h = w*5/8
+
+# Variablerna w och h är dimensioner i tum,
+# därav "hacket" ovan där dessa beräknas utifrån
+# antalet pixlar och pixeltätheten.
+fig, ax = plt.subplots(figsize=(w, h), dpi=dpi)
+
+# Koordinataxlarnas skärning med varandra
+def setSpines():
+    ax.spines['left'].set_position('zero')
+    ax.spines['right'].set_color('none')
+    ax.spines['bottom'].set_position('zero')
+    ax.spines['top'].set_color('none')
+    ax.spines['left'].set_smart_bounds(True)
+    ax.spines['bottom'].set_smart_bounds(True)
+    ax.xaxis.set_ticks_position('bottom')
+    ax.yaxis.set_ticks_position('left')
+
+# Ett rutnät
+def setGrid():
+    ax.grid(b=True, which='major', color='lightgrey',
+            linestyle='-', linewidth=0.3)
+
+# Själva funktionen som ska plottas
+def f(x):
+    return 3 - np.exp(-x)
+
+# Några parametrar som styr utseendet på formlerna
+# om inte "rotation" sätts kommer y-axelns etikett
+# att vara vriden med 90°.
+mathopts = { "rotation":0, "fontsize":15}
+lineopts = {"linewidth":3}
+
+# Skapar 100 värden mellan -2 och 5
+x = np.linspace(-2, 5, 100)
+
+# Axlar och rutnät ställs in
+setSpines()
+setGrid()
+
+# Och här är själva plotten med etiketter
+ax.plot(x, f(x), **lineopts)
+plt.xlabel("$x$", **mathopts) # Märkligt att etiketterna inte finns
+plt.ylabel("$y$", **mathopts) # som en metod hos Axes...
+ax.text(2, 1, "$y=3-e^{-x}$", **mathopts)
+ax.xaxis.set_label_coords(0.97, 0.5)
+ax.yaxis.set_label_coords(0.25, 1)
+
+plt.show()
+fig.savefig("funktionsgraf.png", transparent = False)
+```
+Ja, vi ser resultatet ovanför koden! Jag drog upp storleken och upplösningen
+på grafen en smula för att visa kvalitén. Likaså drog jag upp tjockleken på
+linjen.
