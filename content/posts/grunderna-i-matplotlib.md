@@ -4,12 +4,12 @@ date = "2019-07-23"
 author = "Nikodemus Karlsson"
 cover = ""
 tags = ["matplotlib", "plotta med python", "python"]
-description = "Under två år har jag använt `matplotlib` för att rita grafer i Python. Jag trodde att jag behärskade det någorlunda, men ack som jag bedrog mig."
+description = "Under två år har jag använt matplotlib för att rita grafer i Python. Jag trodde att jag behärskade det någorlunda, men ack som jag bedrog mig."
 showFullContent = false
-draft = true
+draft = false
 +++
 ## Bakgrund
-Att få upp en funktionsgraf i Python med hjälp av `matplotlib` är inte svårt.
+Att få upp en funktionsgraf i Python med hjälp av matplotlib är inte svårt.
 Med lite googlande går det också att anpassa grafen på det som önskas. Ett
 problem för mig är att jag är en ganska sporadisk användare. Det gör att jag
 hinner glömma bort syntax och detaljer mellan gångerna. En reflektion som jag
@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 fig = plt.figure() # En figur skapas...
 ax = fig.add_axes(0, 0, 1, 1) # I vilken ett diagram läggs in
 
-# Punkterna föfbinds
+# Punkterna förbinds
 line = ax.plot([-2, -1, 0, 1, 2], [7, 6, 5, 4, 3])
 
 # Punkterna plottas en och en
@@ -51,7 +51,7 @@ Bilden finns på [`matplotlib`:s FAQ-sida](https://matplotlib.org/faq/usage_faq.
 den till mörk bakgrund).
 
 För mig var det bl.a begreppen Axes och Axis som ställde till det tidigare, för
-att inte tala om Figure. I `matplotlib`:s objektorienterade design så gäller
+att inte tala om Figure. I matplotlib:s objektorienterade design så gäller
 att `Figure` är klassen för hela bilden. Den måste finnas, men ofta görs inte
 så mycket med den. Storleken kan ställas in med hjälp av denna klass, liksom
 att den kan användas då en bild ska sparas. Men själva grafen och
@@ -128,6 +128,7 @@ setGrid()
 
 # Och här är själva plotten med etiketter
 ax.plot(x, f(x), **lineopts)
+ax.set_title("Funktionsgraf", fontsize=20, verticalalignment='bottom')
 plt.xlabel("$x$", **mathopts) # Märkligt att etiketterna inte finns
 plt.ylabel("$y$", **mathopts) # som en metod hos Axes...
 ax.text(2, 1, "$y=3-e^{-x}$", **mathopts)
@@ -139,4 +140,13 @@ fig.savefig("funktionsgraf.png", transparent = False)
 ```
 Ja, vi ser resultatet ovanför koden! Jag drog upp storleken och upplösningen
 på grafen en smula för att visa kvalitén. Likaså drog jag upp tjockleken på
-linjen.
+linjen. Det finns **massor** av inställningar som kan göras. Nedan finns några
+referenser som ingång.
+
+## Referenser
+* [Tutorials på matplotlib:s webbplats](https://matplotlib.org/tutorials/index.html)
+* [Klassbiblioteket Axes (Pyplot), matplotlib:s webbplats](https://matplotlib.org/api/pyplot_summary.html)
+* [Klassbiblioteket Figure (Pyplot), matplotlib:s webbplats](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure)
+* [Två metoder att plotta, fråga på Stack Overflow](https://stackoverflow.com/questions/43482191/matplotlib-axes-plot-vs-pyplot-plot#)
+* [`add_axes()` vs `add_subplot()`, Stack Overflow](https://stackoverflow.com/questions/43326680/what-are-the-differences-between-add-axes-and-add-subplot)
+* [Google Colab, en notebook-miljö att programmera i](https://colab.research.google.com/)
