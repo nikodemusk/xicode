@@ -42,7 +42,7 @@ lösas; det är vanligt att vara mer generell på bekostnad av tydligheten.
 
 ## Anatomin i matplotlib
 I det stora perspektivet är det viktigt att vara klar över anatomin och
-terminologin i `matplotlib`. Jag hittade en förklarande figur på deras
+terminologin i matplotlib. Jag hittade en förklarande figur på deras
 webbplats.
 
 {{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/anatomy_of_a_figure.png" alt="Anatomy of a figure" position="left" style="border-radius: 8px;" caption="Fig. 2. Ingående element i en figur från matplotlib" captionPosition="left" captionStyle="color: red;" >}}
