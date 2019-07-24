@@ -1,6 +1,6 @@
 +++
 title = "Grunderna i matplotlib"
-date = "2019-07-23"
+date = "2019-07-24"
 author = "Nikodemus Karlsson"
 cover = ""
 tags = ["matplotlib", "plotta med python", "python"]
@@ -149,4 +149,5 @@ referenser som ingång.
 * [Klassbiblioteket Figure (Pyplot), matplotlib:s webbplats](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure)
 * [Två metoder att plotta, fråga på Stack Overflow](https://stackoverflow.com/questions/43482191/matplotlib-axes-plot-vs-pyplot-plot#)
 * [`add_axes()` vs `add_subplot()`, Stack Overflow](https://stackoverflow.com/questions/43326680/what-are-the-differences-between-add-axes-and-add-subplot)
+* [Python Plotting With Matplotlib (Guide)](https://realpython.com/python-matplotlib-guide/)
 * [Google Colab, en notebook-miljö att programmera i](https://colab.research.google.com/)

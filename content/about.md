@@ -7,7 +7,7 @@ Nu ska jag alltså skriva en about-sida, "alla" webbplatser ska ju ha en sådan.
 Min erfarenhet säger att webbplatser som jag försöker underhålla tar olika
 riktningar över tid. Min tanke med denna webbplats är att dela kod och notera
 erfarenheter vad beträffar programmering för en matematiklärares behov; alltså
-inte erfarenheter kring *elevernas* programmering matematikkurser (det kanhända
+inte erfarenheter kring *elevernas* programmering i matematikkurser (det kanhända
 att jag [skriver om på xiblog](https://xiblog.se)). Idén till webbplatsen kom
 upp i samband med att jag orienterade mig i Python-biblioteket
 [Matplotlib](https://matplotlib.org).
