@@ -8,7 +8,7 @@ description = "Under två år har jag använt `matplotlib` för att rita grafer 
 showFullContent = false
 draft = true
 +++
-# Bakgrund
+## Bakgrund
 Att få upp en funktionsgraf i Python med hjälp av `matplotlib` är inte svårt.
 Med lite googlande går det också att anpassa grafen på det som önskas. Ett
 problem för mig är att jag är en ganska sporadisk användare. Det gör att jag
@@ -18,11 +18,34 @@ ungefär samma sak. Det var upprinnelsen till att jag började sätta mig in i
 biblioteket snarare än att googla från gång till gång för att hitta en snabb
 lösning till en akut uppgift.
 
-# Anatomin i matplotlib
+## Exempel: Enklast möjliga plot
+```python
+import matplotlib.pyplot as plt
+fig = plt.figure() # En figur skapas...
+ax = fig.add_axes(0, 0, 1, 1) # I vilken ett diagram läggs in
+
+# Punkterna föfbinds
+line = ax.plot([-2, -1, 0, 1, 2], [7, 6, 5, 4, 3])
+
+# Punkterna plottas en och en
+points = ax.plot([-2, -1, 0, 1, 2], [7, 6, 5, 4, 3], "o")
+```
+
+Här erhålls nu ett diagram:
+
+{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/diagram_1.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 1: Diagram med ett fåtal punkter" captionPosition="center" captionStyle="color: red;" >}}
+
+Fördelen med det här exemplet är att det blir tydligt vad som görs. Vi lägger
+till en figur, varpå diagrammet läggs i figuren, varpå grafen plottas i
+diagrammet. Nackdelen med exemplet är att det inte är så här som det brukar
+lösas; det är vanligt att vara mer generell på bekostnad av tydligheten.
+
+## Anatomin i matplotlib
 I det stora perspektivet är det viktigt att vara klar över anatomin och
 terminologin i `matplotlib`. Jag hittade en förklarande figur på deras
 webbplats.
-{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/anatomy_of_a_figure.png" alt="Anatomy of a figure" position="left" style="border-radius: 8px;" caption="Ingående element i en figur från matplotlib" captionPosition="left" captionStyle="color: red;" >}}
+
+{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/anatomy_of_a_figure.png" alt="Anatomy of a figure" position="left" style="border-radius: 8px;" caption="Fig. 2. Ingående element i en figur från matplotlib" captionPosition="left" captionStyle="color: red;" >}}
 
 Bilden finns på [`matplotlib`:s FAQ-sida](https://matplotlib.org/faq/usage_faq.html) med [källkod från denna sida](https://matplotlib.org/3.1.0/gallery/showcase/anatomy.html) (vilket gjorde att jag kunde modifiera
 den till mörk bakgrund).
@@ -36,54 +59,22 @@ koordinatsystemet är en instans av klassen `Axes`. Med den görs det mesta
 som har med grafen att göra. En eller flera ´Axes´ läggs till i en `Figure`,
 som då alltså kan innehålla flera diagram.
 Klassen `Axes` ska inte förväxlas med metoden `axis()`, som har med själva
-koordinataxlarna att göra (som kan styras genom `Axes`).
+koordinataxlarna att göra (som kan styras genom `Axes`), eller för den delen
+klassen `Axis`, som har funktioner för att styra allt som har med axlar
+att göra.
 
-# Exempel
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-fig = plt.figure()
-ax = fig.add_axes(0, 0, 1, 1)
-```
-
-Här erhålls nu ett diagram:
-
-![](https://cloudheaven.se/~nikodemus/shared/plottamedpython/diagramram.png)
-
-eller iallafall ramen till ett diagram. När vi ska lägga till data görs det
-med hjälp av variablen `ax` enligt:
-
-```python
-line = ax.plot([-2, -1, 0, 1, 2], [7, 6, 5, 4, 3])
-points = ax.plot([-2, -1, 0, 1, 2], [7, 6, 5, 4, 3], "o")
-```
-
-![](https://cloudheaven.se/~nikodemus/shared/plottamedpython/diagram_1.png)
-
-Jag lade alltså till en lista med x-värden och en annan med y-värden (tråkigt med en rät linje, det ska bli roligare exempel senare).
-Dessutom så plottade jag värdena två gånger: den översta raden för att få
-linjen och den snarlika undre raden för att få punkterna utmarkerade.
-
-Fördelen med det här exemplet är att det blir tydligt vad som görs. Vi lägger
-till en figur, varpå diagrammet läggs i figuren, varpå grafen plottas i
-diagrammet. Nackdelen med exemplet är att det inte är så här som det brukar
-lösas; det är vanligt att vara mer generell på bekostnad av tydligheten.
-
-# Exempel på funktionsgraf
-Jag vill avrunda med ett exempel på hur en funktionsgraf kan fås fram. Som
-lärare i matematik är det en detalj i diagrammen som hittills inte är till
-belåtenhet: koordinataxlarna. De diagram som jag ritat upp innesluts av en
-ram som också utgör koordinataxlarna. Men många mattelärare med mig önskar
-koordinataxlar som skär varandra i origo.
+## Exempel på funktionsgraf
+Som lärare i matematik är det framför allt en detalj i diagrammet i Fig. 1
+som inte är till belåtenhet: koordinataxlarna.
+Diagrammt innesluts av en ram som också utgör koordinataxlarna. Men många
+mattelärare med mig önskar koordinataxlar som skär varandra i origo.
 
 Dessutom ska jag inte ha en linjär funktion denna gång, det innebär också
 att det kommer att behövas **många** fler koordinater än tidigare.
 
 Låt oss plotta funktionen $y=3-e^{-x}$ i intervallet $-2\leq x\leq 5$
 
-{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/funktionsgraf.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 5: Funktionsgraf" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/funktionsgraf.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 3: Funktionsgraf" captionPosition="center" captionStyle="color: red;" >}}
 
 ```python
 import numpy as np
