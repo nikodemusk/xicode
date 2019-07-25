@@ -1,22 +1,24 @@
 +++
-title = "Grunderna i matplotlib"
+title = "Skapa funktionsgrafer med Python"
 date = "2019-07-24"
 author = "Nikodemus Karlsson"
-cover = ""
+cover = "https://cloudheaven.se/~nikodemus/shared/plottamedpython/cover_1.png"
 tags = ["matplotlib", "plotta med python", "python"]
-description = "Under två år har jag använt matplotlib för att rita grafer i Python. Jag trodde att jag behärskade det någorlunda, men ack som jag bedrog mig."
+description = "Under två år har jag använt matplotlib för att rita grafer i Python. Jag trodde att jag behärskade det någorlunda, men ack vad jag bedrog mig."
 showFullContent = false
 draft = false
 +++
 ## Bakgrund
-Att få upp en funktionsgraf i Python med hjälp av matplotlib är inte svårt.
+Att få upp en funktionsgraf i Python med hjälp av [matplotlib]
+(https://matplotlib.org) är inte svårt.
 Med lite googlande går det också att anpassa grafen på det som önskas. Ett
-problem för mig är att jag är en ganska sporadisk användare. Det gör att jag
-hinner glömma bort syntax och detaljer mellan gångerna. En reflektion som jag
-gjort är att koden ser lite annorlunda ut från gång till gång, trots att jag gör
-ungefär samma sak. Det var upprinnelsen till att jag började sätta mig in i
-biblioteket snarare än att googla från gång till gång för att hitta en snabb
-lösning till en akut uppgift.
+problem för mig är att jag är en ganska sporadisk användare. Den tidsaspekten
+gör att jag hinner glömma bort syntax och detaljer mellan gångerna.
+Vidare har jag inte haft någon teori att bygga detaljerna på, uppgifterna som
+ska göras ofta varit för akuta för att jag ska ha hunnit sätta mig in i teorin.
+Det var upprinnelsen till att jag nu, när jag inte hade någon akut uppgift att
+göra, började sätta mig in i biblioteket mer "på riktigt". Det ledde till att
+jag i alla fall har skrapat på ytan.
 
 ## Exempel: Enklast möjliga plot
 ```python
@@ -67,7 +69,8 @@ att göra.
 Som lärare i matematik är det framför allt en detalj i diagrammet i Fig. 1
 som inte är till belåtenhet: koordinataxlarna.
 Diagrammt innesluts av en ram som också utgör koordinataxlarna. Men många
-mattelärare med mig önskar koordinataxlar som skär varandra i origo.
+mattelärare med mig önskar i sin undervisning koordinataxlar som skär varandra
+i origo.
 
 Dessutom ska jag inte ha en linjär funktion denna gång, det innebär också
 att det kommer att behövas **många** fler koordinater än tidigare.
@@ -150,4 +153,5 @@ referenser som ingång.
 * [Två metoder att plotta, fråga på Stack Overflow](https://stackoverflow.com/questions/43482191/matplotlib-axes-plot-vs-pyplot-plot#)
 * [`add_axes()` vs `add_subplot()`, Stack Overflow](https://stackoverflow.com/questions/43326680/what-are-the-differences-between-add-axes-and-add-subplot)
 * [Python Plotting With Matplotlib (Guide)](https://realpython.com/python-matplotlib-guide/)
+* [Inspiration till den översta grafen](https://brushingupscience.com/2016/06/21/matplotlib-animations-the-easy-way/)
 * [Google Colab, en notebook-miljö att programmera i](https://colab.research.google.com/)
