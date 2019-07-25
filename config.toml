@@ -1,7 +1,7 @@
 # Se https://gohugo.io/getting-started/configuration/
 # för fler inställningar i denna fil.
 
-baseurl = "https://nikodemusk.github.io"
+baseurl = "https://xicode.se"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 5
