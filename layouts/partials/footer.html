@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="footer__inner">
+    {{ if $.Site.Copyright }}
+      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+    {{else}}
+      <div class="copyright">
+        <span>© {{ now.Year }} <a href = https://twitter.com/magistern>magistern</a></span>
+        <span>:: Licensed under <a href = https://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a>
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+    {{end}}
+  </div>
+
+</footer>
+
+<script src="{{ "assets/main.js" | absURL }}"></script>
+<script src="{{ "assets/prism.js" | absURL }}"></script>
+
+<!-- Extended footer section-->
+{{ partial "extended_footer.html" . }}

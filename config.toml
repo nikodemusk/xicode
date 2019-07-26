@@ -6,6 +6,8 @@ languageCode = "en-us"
 theme = "terminal"
 paginate = 5
 disqusShortname = "xicode"
+enableEmoji = true
+enableInlineShortcodes = true
 
 [author]
     name = "Nikodemus"       #Author name
@@ -34,7 +36,7 @@ disqusShortname = "xicode"
     title = "xicode.se"
     subtitle = ""
     keywords = "programmering"
-    copyright = "Nikodemus Karlsson"
+    copyright = ""
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
@@ -48,7 +50,10 @@ disqusShortname = "xicode"
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
-        #identifier = "showcase"
-        #name = "Showcase"
-        #url = "/showcase"
+        weight = 50
+      #[[languages.en.menu.main]]
+      #  identifier = "showcase"
+      #  name = "Showcase"
+      #  parent = ""
+      #  url = "/showcase"
+      #  weight = 100
