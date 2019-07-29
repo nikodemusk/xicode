@@ -10,7 +10,7 @@ draft = false
 +++
 
 # Introduction
-The [NumPy library](https://numpy.org/devdocs/) handles us a usable Array data type. An array is a
+The [NumPy library](https://numpy.org/) handles us a usable Array data type. An array is a
 collection of data in one or more dimensions; here I will demonstrate some properties and operations on 1D and 2D arrays.
 
 There are several ways to initialize an Array object. A straight forward
@@ -228,3 +228,7 @@ Let's now look at the simulation together with the model function.
 We have got a more realistic set of values by adding
 normal distributed random values on the model function.
 That's all for now, folks!
+
+# References
+* [NumPy library documentation](https://numpy.org/devdocs/)
+* [Another way add rows and columns in arrays](https://stackoverflow.com/questions/8486294/how-to-add-an-extra-column-to-a-numpy-array/20688968#20688968)
