@@ -1,18 +1,17 @@
 +++
 title = "Some Numpy Array Operations"
-date = "2019-07-27"
+date = "2019-07-29"
 author = "Nikodemus Karlsson"
-cover = ""
+cover = "https://cloudheaven.se/~nikodemus/shared/pythonstuff/array-cover.png"
 tags = ["python", "numpy"]
-description = " "
+description = "In this post, I will cover some common operations on NumPy-arrays by examples."
 showFullContent = false
-draft = true
+draft = false
 +++
 
 # Introduction
-The `NumPy` library handles us a usable Array data type. An array is data in
-multiple dimensions; here I will demonstrate some properties and operations on
-1D and 2D arrays.
+The [NumPy library](https://numpy.org/devdocs/) handles us a usable Array data type. An array is a
+collection of data in one or more dimensions; here I will demonstrate some properties and operations on 1D and 2D arrays.
 
 There are several ways to initialize an Array object. A straight forward
 solution is
@@ -46,6 +45,7 @@ Raise each element by the power of 2:
 [[ 1  4  9]
  [16 25 36]]
 ```
+# Slincing, adding and mutating
 In the next example I will initialize an array in a different way, mutate the
 elements, slice out a row and a column as well as adding a row and a column.
 
@@ -93,9 +93,11 @@ print("Array with appended column:")
 print(aArray)
 ```
 I tell the array about it's dimension, but these variables I use just
-once: in the creation process. In the further steps, when need the dimension,
-I call `aArray.shape()`. Another cool way to create an array of any dimension
-is with `reshape`, e.g `np.arange(12).reshape(3, 4)`.
+once: in the creation process. Another cool way to create an array of any
+ dimension is with `reshape()` method, e.g `np.arange(12).reshape(3, 4)`.
+
+In the further steps, when need the dimension, I peek the `aArray.shape`
+property.
 
 The output from the above script is:
 ```
@@ -136,6 +138,7 @@ Array with appended column:
  [ 30.  60.  90. 120.  67.]
  [ 60.  17.  65.  10.  55.]]
 ```
+# Adding noise to a model function
 Well, that was some basics! Now, I will put it to be useful in a small
 application.
 
@@ -148,12 +151,12 @@ respect to time $t$, we get something like
 $$y=A\sin(\omega{t}+\phi)$$
 
 for some constants $A$, $\omega$ and $\phi$. In the upcoming example I will
-suppose, for the case of simplicity, that $A = 1$, $\omega = 1$ and $\phi = 0$.
+assign, for the case of simplicity,  $A = 1$, $\omega = 1$ and $\phi = 0$.
 
-Well, maybe the mass will behave in exact that way the function states. It will,
+Well, maybe a mass will behave in exact the way the function states. It will,
 in Utopia but not in the classroom. To model a more realistic case, we need to
 add some noise to the function before present the data for the students. Here,
-the `Array` class in `NumPy` comes to our help.
+the `Array` class in NumPy comes to our help.
 
 I will make an array like
 
@@ -195,7 +198,7 @@ Great! We now have the two first rows in our array with just a few lines
 of code. Just the last row with the noise left.
 
 To get a realistic noise, we call the function `random.normal()`, which is a
-part of the `NumPy` package. We call it with argument
+part of the NumPy package. We call it with argument
 `random.normal(mu, sigma, size)`; that is mean value, standard deviation and
 size of the array with values (yupp, the function may return an array of
 values if we specify the size). We continue the code:
@@ -221,3 +224,7 @@ fig.savefig("graph.png")
 Let's now look at the simulation together with the model function.
 
 ![](https://cloudheaven.se/~nikodemus/shared/pythonstuff/graph.png)
+
+We have got a more realistic set of values by adding
+normal distributed random values on the model function.
+That's all for now, folks!
