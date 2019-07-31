@@ -18,18 +18,18 @@ This site is hosted by [GitHub](https://github.com) and made with the tool
 programming, I thought it is suitable that the hosting is parked at a
 programming share platform. The posts are written with a standard text editor
 ([mostly Atom](https://atom.io)) rather than a [WYSIWYG](https://sv.wikipedia.org/wiki/WYSIWYG) environment;
-the future will tell if I will experience it as practical and flexible
+the future will tell if I will find it practical and flexible
 or annoying if things are messed up.
 
 That was a small introduction to the site. Oh, I almost forgot. I am Nikodemus
-Karlsson, alias **magistern** and is a high school teacher[^1] i in Maths and Physics. I also run
+Karlsson, alias **magistern**. I am a high school teacher[^1] i in Maths and Physics, and also run
 
 * [xiblog.se](https://xiblog.se), which aims to focus on related things to my
 teaching subjects.
 * [nikodemus.se](https://nikodemus.se), a personal site, yet not so many
 posts.
 * [cloudheaven.se](https://cloudheaven.se), my "laboratory" on Internet,
-where I host the above sites and  a few more services just for fun.
+where I host the above sites and a few more services just for fun.
 
 On Twitter, I am
 <a href="https://twitter.com/magistern?ref_src=twsrc%5Etfw"
