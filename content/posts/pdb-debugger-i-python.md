@@ -2,7 +2,7 @@
 title = "pdb - Debugger i Python"
 date = "2019-07-26"
 author = "Nikodemus Karlsson"
-cover = "https://cloudheaven.se/~nikodemus/shared/pythonstuff/binary-code-475664_1280_cropped.jpeg"
+cover = "https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/pdbdebugger/binary-code-475664_1280_cropped.jpeg"
 tags = ["python"]
 description = " Ett exempel på användning av Pythons debugger"
 showFullContent = false

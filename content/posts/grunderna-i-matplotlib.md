@@ -2,7 +2,7 @@
 title = "Skapa funktionsgrafer med Python"
 date = "2019-07-24"
 author = "Nikodemus Karlsson"
-cover = "https://cloudheaven.se/~nikodemus/shared/plottamedpython/cover_1.png"
+cover = "https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/skapafunktionsgrafermedpython/cover_1.png"
 tags = ["matplotlib", "plotta med python", "python"]
 description = "Under två år har jag använt matplotlib för att rita grafer i Python. Jag trodde att jag behärskade det någorlunda, men ack vad jag bedrog mig."
 showFullContent = false
@@ -35,7 +35,7 @@ points = ax.plot([-2, -1, 0, 1, 2], [7, 6, 5, 4, 3], "o")
 
 Här erhålls nu ett diagram:
 
-{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/diagram_1.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 1: Diagram med ett fåtal punkter" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/skapafunktionsgrafermedpython/diagram_1.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 1: Diagram med ett fåtal punkter" captionPosition="center" captionStyle="color: red;" >}}
 
 Fördelen med det här exemplet är att det blir tydligt vad som görs. Vi lägger
 till en figur, varpå diagrammet läggs i figuren, varpå grafen plottas i
@@ -47,7 +47,7 @@ I det stora perspektivet är det viktigt att vara klar över anatomin och
 terminologin i matplotlib. Jag hittade en förklarande figur på deras
 webbplats.
 
-{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/anatomy_of_a_figure.png" alt="Anatomy of a figure" position="left" style="border-radius: 8px;" caption="Fig. 2. Ingående element i en figur från matplotlib" captionPosition="left" captionStyle="color: red;" >}}
+{{< figure src="https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/skapafunktionsgrafermedpython/anatomy_of_a_figure.png" alt="Anatomy of a figure" position="left" style="border-radius: 8px;" caption="Fig. 2. Ingående element i en figur från matplotlib" captionPosition="left" captionStyle="color: red;" >}}
 
 Bilden finns på [`matplotlib`:s FAQ-sida](https://matplotlib.org/faq/usage_faq.html) med [källkod från denna sida](https://matplotlib.org/3.1.0/gallery/showcase/anatomy.html) (vilket gjorde att jag kunde modifiera
 den till mörk bakgrund).
@@ -77,7 +77,7 @@ att det kommer att behövas **många** fler koordinater än tidigare.
 
 Låt oss plotta funktionen $y=3-e^{-x}$ i intervallet $-2\leq x\leq 5$
 
-{{< figure src="https://cloudheaven.se/~nikodemus/shared/plottamedpython/funktionsgraf.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 3: Funktionsgraf" captionPosition="center" captionStyle="color: red;" >}}
+{{< figure src="https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/skapafunktionsgrafermedpython/funktionsgraf.png" alt="Tomt diagram" position="left" style="border-radius: 8px;" caption="Fig 3: Funktionsgraf" captionPosition="center" captionStyle="color: red;" >}}
 
 ```python
 import numpy as np

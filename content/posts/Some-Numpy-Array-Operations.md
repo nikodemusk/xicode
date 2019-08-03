@@ -2,7 +2,7 @@
 title = "Some Numpy Array Operations"
 date = "2019-07-29"
 author = "Nikodemus Karlsson"
-cover = "https://cloudheaven.se/~nikodemus/shared/pythonstuff/array-cover.png"
+cover = "https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/numpyarrayoperations/array-cover.png"
 tags = ["python", "numpy"]
 description = "In this post, I will cover some common operations on NumPy-arrays by examples."
 showFullContent = false
@@ -55,7 +55,7 @@ import numpy as np
 seed = 1564248191 # For reproducing the random numbers
 numberOfRows, numberOfCols = 3, 4
 
-print("\nInitialing an array with zeros...")
+print("\nInitialize an array with zeros...")
 aArray = np.zeros([numberOfRows, numberOfCols])
 print(f"Array shape: {aArray.shape[0]} rows and {aArray.shape[1]} colums.")
 print(aArray)
@@ -101,7 +101,7 @@ property.
 
 The output from the above script is:
 ```
-Initialing an array with zeros...
+Initialize an array with zeros...
 Array shape: 3 rows and 4 colums.
 [[0. 0. 0. 0.]
  [0. 0. 0. 0.]
@@ -223,7 +223,7 @@ fig.savefig("graph.png")
 
 Let's now look at the simulation together with the model function.
 
-![](https://cloudheaven.se/~nikodemus/shared/pythonstuff/graph.png)
+![](https://cloudfiles.nyc3.digitaloceanspaces.com/xicode/numpyarrayoperations/graph.png)
 
 We have got a more realistic set of values by adding
 normal distributed random values on the model function.
