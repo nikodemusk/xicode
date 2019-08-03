@@ -136,7 +136,7 @@ some constants $a$ and $b$.
 
 ---
 # Bottom line
-The code for the generation og the spectrum like header image is below:
+The code for the generation of the spectrum like header image is below:
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
