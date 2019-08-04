@@ -8,6 +8,7 @@ paginate = 5
 #disqusShortname = "xicode"
 enableEmoji = true
 enableInlineShortcodes = true
+googleAnalytics = "UA-145126982-1"
 
 [author]
     name = "Nikodemus"       #Author name
